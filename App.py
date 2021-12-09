@@ -45,7 +45,7 @@ def main():
                         for page in doc:
                             text += page.getText()
                             
-                    nlp = spacy.load("en_core_med7_lg")
+                    nlp = load_model()
                     doc = nlp(text)
                     
                 
