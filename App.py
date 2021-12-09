@@ -7,6 +7,13 @@ from PIL import Image
 from spacy import displacy
 
 
+
+@st.experimental_singleton
+def load_model():
+    nlp = spacy.load("en_core_med7_lg")
+    return nlp
+
+
 def main():
     st.title("Drugs Entity Extractor App")
     
